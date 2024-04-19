@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Vite App</title>
+</head>
+<body>
+
+    <main>
+
+        <h1>Testing fonts</h1>
+
+        <div style="font-family: system-ui">
+            <p>
+                The default fonts in use below. This is the <em>no noto</em> case.
+            </p>
+            <code>
+                --system-fonts: "Jacquard 24", system-ui;
+                font-family: var(--system-fonts);
+            </code>
+        </div>
+
+        <hr>
+
+        <div class="display-thing">
+            <section>
+                <h2>System fonts: no noto</h2>
+
+                <p>
+                    Testing some emoji. Go team: 🐛 🙂‍↔️.
+                </p>
+                <p>
+                    The 💩 in the 💨 falls mainly in 🌎
+                </p>
+            </section>
+
+            <section class="noto-only">
+                <h2>System fonts: only noto in font-family</h2>
+
+                <code>
+                    font-family: "Noto Color Emoji";
+                </code>
+
+                <p>
+                    Testing some emoji. Go team: 🐛 🙂‍↔️.
+                </p>
+                <p>
+                    The 💩 in the 💨 falls mainly in 🌎
+                </p>
+            </section>
+
+
+
+            <section class="noto-first">
+                <h2>System fonts: noto first in font-family</h2>
+
+                <code>
+                    font-family: "Noto Color Emoji", var(--system-fonts);
+                </code>
+
+                <p>
+                    Testing some emoji. Go team: 🐛 🙂‍↔️.
+                </p>
+                <p>
+                    The 💩 in the 💨 falls mainly in 🌎
+                </p>
+            </section>
+
+
+
+            <section class="noto-last">
+                <h2>System fonts: noto last in font-family</h2>
+
+                <code>
+                    font-family: var(--system-fonts), "Noto Color Emoji";
+                </code>
+
+                <p>
+                    Testing some emoji. Go team: 🐛 🙂‍↔️ .
+                </p>
+                <p>
+                    The 💩 in the 💨 falls mainly in 🌎
+                </p>
+            </section>
+
+
+
+
+
+
+
+            <section class="noto-black-last">
+                <h2>System fonts: noto b&w last, no colour</h2>
+
+                <code>
+                    font-family: var(--system-fonts), "Noto Emoji";
+                </code>
+
+                <p>
+                    Testing some emoji. Go team: 🐛 🙂‍↔️.
+                </p>
+                <p>
+                    The 💩 in the 💨 falls mainly in 🌎
+                </p>
+            </section>
+
+
+
+            <section class="noto-black-last-colour-first">
+                <h2>System fonts: colour first, noto b&w last</h2>
+
+                <code>
+                    font-family: "Noto Color Emoji", var(--system-fonts), "Noto Emoji";
+                </code>
+
+                <p>
+                    Testing some emoji. Go team: 🐛 🙂‍↔️.
+                </p>
+                <p>
+                    The 💩 in the 💨 falls mainly in 🌎
+                </p>
+            </section>
+
+            <section class="noto-black-first-colour-last">
+                <h2>System fonts: colour last, noto b&w first</h2>
+
+                <code>
+                    font-family: "Noto Emoji", var(--system-fonts), "Noto Color Emoji", ;
+                </code>
+
+                <p>
+                    Testing some emoji. Go team: 🐛 🙂‍↔️.
+                </p>
+                <p>
+                    The 💩 in the 💨 falls mainly in 🌎
+                </p>
+            </section>
+        </div>
+
+
+
+    </main>
+
+
+<script type="module" src="/main.js"></script>
+</body>
+</html>
