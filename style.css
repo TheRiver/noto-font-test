@@ -21,6 +21,7 @@
     font-style: normal;
 }
 
+.best,
 .noto-first {
     font-family: "Noto Color Emoji", var(--system-fonts);
     font-weight: 400;
